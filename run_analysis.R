@@ -1,4 +1,4 @@
-#Loading dplyr package
+##Loading dplyr package
 library(dplyr)
 
 #Reading train files
@@ -17,8 +17,7 @@ activity <- read.table(file.path("activity_labels.txt"))
 
 #Step 1. Merges the training and the test sets to create one data set
 
-humanActivity <- rbind(cbind(trainsub, trainX, trainY), cbind(testsub, testX, testY)
-)
+humanActivity <- rbind(cbind(trainsub, trainX, trainY), cbind(testsub, testX, testY))
 
 #Setting colnames
 colnames(humanActivity) <- c("subject", features[, 2], "activity")
